@@ -1,0 +1,38 @@
+/*  sección SearchInput.jsx */
+
+.search_input{
+    font-size: 15px;
+    border: 0;
+    box-shadow: 10px;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 5px 10px 20px 0px rgba(218, 203, 203, 0.9);
+    outline: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+.btn_search{
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(207, 15, 15);
+    color: rgb(255, 255, 255);
+    border: 0;
+    outline: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+    transition: transform 200ms ease;
+}
+
+.btn_search:hover {
+    transform: scale(1.05);
+    transition: transform 200ms ease;
+
+}

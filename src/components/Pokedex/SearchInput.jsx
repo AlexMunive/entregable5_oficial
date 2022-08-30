@@ -9,8 +9,8 @@ const SearchInput = ({setPokeSearch}) => {
 
   return (
     <form onSubmit={handleSubmit}>
-        <input id='searchTex' type="text" />
-        <button>Search</button>
+        <input className='search_input' id='searchTex' type="text" placeholder='Busca un pokemón'/>
+        <button className='btn_search'>Search</button>
     </form>
   )
 }
