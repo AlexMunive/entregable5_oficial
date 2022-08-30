@@ -1,0 +1,544 @@
+body {
+    margin: 0;
+
+}
+
+/*  sección home */
+.img_home {
+    width: 600px;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(241, 241, 241);
+}
+
+.home_h1 {
+    color: rgb(212, 14, 14);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.home_p {
+    font-size: 20px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.home_input {
+    font-size: 20px;
+    border: 0;
+    box-shadow: 10px;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 5px 10px 20px 0px rgba(218, 203, 203, 0.9);
+    outline: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.btn_home {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(207, 15, 15);
+    color: rgb(255, 255, 255);
+    border: 0;
+    outline: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.btn_home:hover {
+    transform: scale(1.05);
+    transition: transform 200ms ease;
+
+}
+
+/*  sección home-footer */
+.red-rectangle {
+    width: 100%;
+    height: 80px;
+    background-color: #DD1A1A;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.black-rectangle {
+    width: 100%;
+    height: 35px;
+    background-color: #0C0C0C;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.circle-ext {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid black;
+}
+
+.circle-int {
+    width: 35px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*  sección home-header */
+
+.red-rectangle-header {
+    width: 100%;
+    height: 80px;
+    background-color: #DD1A1A;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.header-img {
+    width: 60%;
+    max-width: 280px;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    transform: translate(0, -50%);
+    z-index: 1;
+}
+
+.black-rectangle-header {
+    width: 100%;
+    height: 30px;
+    background-color: #0C0C0C;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.circle-ext-header {
+    width: 45px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    top: 30px;
+    right: -85%;
+    border: 8px solid black;
+}
+
+.circle-int-header {
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*  sección Pokedex.jsx */
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px 20px;
+    padding-bottom: 100px;
+  }
+.header_a {
+    width: 100%;
+    height: 15vh;
+    background-color: rgb(223, 12, 12);
+}
+
+.header_b {
+    width: 100%;
+    height: 7vh;
+    background-color: rgb(83, 83, 83);
+}
+
+.header_img {
+    width: 400px;
+    position: relative;
+    top: 26px;
+    left: 40px;
+}
+
+.header_img_pokebola {
+    width: 90px;
+    position: relative;
+    left: 80%;
+    top: -33px;
+}
+
+.pokedex_p {
+    font-size: 20px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.pokedex_strong {
+    color: rgb(212, 14, 14);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/*  sección PokemonCard.jsx */
+.card {
+    width: 100%;
+    max-width: 280px;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 1px 7px #0003;
+    /* border: 7px solid #B1DBBC; */
+    cursor: pointer;
+    transition: transform 200ms ease;
+    
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 200ms ease;
+}
+
+.card_img {
+    width: 60%;
+    left: 50%;
+    top: 15px;
+    transform: translateX(30%);
+
+}
+
+.card_body {
+    margin-top: 60px;
+}
+
+.card_h1 {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: lowercase;
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 5px;
+
+}
+
+.card_h1:first-letter {
+    text-transform: uppercase;
+}
+
+.card_header {
+    position: relative;
+    height: 120px;
+}
+/*  sección PokemonCard.jsx - border card*/
+.border-grass{
+    border: 7px solid;
+    border-color: rgba(177, 219, 188, 1);
+}
+.border-fire{
+    border: 10px solid;
+    border-color: rgb(221, 156, 72);
+}
+.border-water{
+    border: 10px solid;
+    border-color:rgb(70, 141, 233);
+}
+.border-bug{
+    border: 10px solid;
+    border-color:rgb(107, 201, 106);
+}
+.border-normal{
+    border: 10px solid;
+    border-color:rgb(150, 120, 127);
+}
+.border-fighting{
+    border: 10px solid;
+    border-color:rgb(168, 90, 71);
+}
+.border-poison{
+    border: 10px solid;
+    border-color:rgb(111, 78, 143);
+}
+.border-ghost{
+    border: 10px solid;
+    border-color:rgb(70, 72, 114);
+}
+.border-rock{
+    border: 10px solid;
+    border-color:rgb(167, 165, 165);
+}
+.border-dark{
+    border: 10px solid;
+    border-color:rgb(43, 48, 46);
+}
+.border-ice{
+    border: 10px solid;
+    border-color:rgb(131, 195, 223);
+}
+.border-steel{
+    border: 10px solid;
+    border-color:rgb(119, 134, 129);
+}
+.border-dragon{
+    border: 10px solid;
+    border-color:rgb(109, 166, 173);
+}
+.border-fairy{
+    border: 10px solid;
+    border-color:rgb(168, 71, 103);
+}
+.border-electric{
+    border: 10px solid;
+    border-color:rgb(49, 55, 160);
+}
+.border-ground{
+    border: 10px solid;
+    border-color:rgb(138, 98, 38);
+}
+
+
+/*  sección PokemonCard.jsx - background header */
+.bg-grass{
+    background: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
+}
+
+.bg-fire{
+    background: linear-gradient(176.37deg, #F96D6F -32.26%, #E35825 22.55%, #E8AE1B 125.72%);
+}
+
+.bg-water{
+    background: linear-gradient(179.57deg, #133258 -70.14%, #1479FB 56.16%, #82B2F1 214.85%);
+}
+
+.bg-bug{
+    background: linear-gradient(177.56deg, #62DB60 -58.92%, #3BB039 16.57%, #AAFFA8 209.53%);
+}
+
+.bg-normal{
+    background: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%);
+}
+
+.bg-fighting{
+    background: linear-gradient(176.83deg, #96402A -8.78%, #F1613C 169.09%, #CB735D 242.33%);
+}
+
+.bg-poison{
+    background: linear-gradient(177.03deg, #5B3184 -11.97%, #A564E3 71.28%, #CE9BFF 135.64%);
+}
+
+.bg-ghost{
+    background: linear-gradient(177.03deg, #323569 -11.97%, #454AA8 57.49%, #787DDA 135.64%);
+}
+
+.bg-rock{
+    background: linear-gradient(177.03deg, #7E7E7E -11.97%, #8D8D94 57.49%, #D3D3D3 135.64%);
+}
+
+.bg-dark{
+    background: linear-gradient(177.03deg, #030706 -11.97%, #0D1211 57.49%, #5A5E5D 135.64%);
+}
+
+.bg-ice{
+    background: linear-gradient(177.03deg, #6FBEDF -11.97%, #64CBF5 47.77%, #BDEBFE 136.72%);
+}
+
+.bg-steel{
+    background: linear-gradient(179.75deg, #5E736C -19.96%, #728881 43.67%, #A8A8A8 138.4%);
+}
+
+.bg-dragon{
+    background: linear-gradient(179.75deg, #478A93 -19.96%, #56A4AE 43.67%, #A2BEC1 138.4%);
+}
+
+.bg-fairy{
+    background: linear-gradient(179.75deg, #971B45 -19.96%, #C23867 43.67%, #CD7D98 138.4%);
+}
+
+.bg-electric{
+    background: linear-gradient(179.75deg, #0C1395 -19.96%, #2B319B 43.67%, #7075D9 138.4%);
+}
+
+.bg-ground{
+    background: linear-gradient(179.75deg, #654008 -19.96%, #895C1A 43.67%, #D69638 138.4%);
+}
+
+
+/*  sección PokemonCard.jsx - colors letters */
+.grass {
+
+    color:  #416460;
+}
+.fire {
+    color: #E75C35;
+}
+.water{
+    color:  #1479FB;
+}
+.bug{
+    color: #4AB648;
+}
+.normal{
+    color: #735259;
+}
+.fighting{
+    color: #96402A;
+}
+.poison{
+    color:#5B3184;
+}
+.ghost{
+    color: #323569;
+}
+.rock{
+    color: #7E7E7E;
+}
+.dark{
+    color: #030706;
+}
+.ice{
+    color: #6FBEDF;
+}
+.steel{
+    color: #5E736C;
+}
+.dragon{
+    color: #478A93;
+}
+.fairy{
+    color: #971B45;
+}
+.electric{
+    color: #0C1395;
+}
+.ground{
+    color: #654008;
+}
+
+
+
+.card_type {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    color: rgb(56, 56, 56);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: 300;
+    text-transform: capitalize;
+    font-size: 15px;
+
+}
+
+
+.card_h3 {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+
+    text-align: center;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: capitalize
+}
+
+.card_h3:nth-child(2) {
+    position: relative;
+}
+
+.card_h3:nth-child(2)::before {
+    content: '/';
+    position: absolute;
+    left: -7px;
+    font-weight: 800;
+    margin-top: 2px;
+}
+
+
+.card_hr {
+    border: none;
+    border-top: 2px solid #E5E5E5;
+    width: 90%;
+}
+
+.card__footer {
+    margin: 15px 0 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card__list-stats {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+/*  sección StatPokemon.jsx */
+
+.infostat_h4 {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: #9c9c9c;
+    font-weight: 100;
+    
+}
+
+.infostat_div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-content: center;
+    gap: 5px;
+}
+
+.infostat_p {
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
