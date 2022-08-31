@@ -1,10 +1,11 @@
 import React from 'react'
 
-const SearchInput = ({setPokeSearch}) => {
+const SearchInput = ({setPokeSearch,setOptionType}) => {
 
     const handleSubmit=e=>{
         e.preventDefault()
         setPokeSearch(e.target.searchTex.value.trim().toLowerCase())
+        setOptionType('All')
     }
 
   return (

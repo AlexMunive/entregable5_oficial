@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
-const SelectType = ({setOptionType}) => {
+const SelectType = ({setOptionType, optionType}) => {
 
   const [listTypes, setListTypes] = useState()
 
@@ -17,7 +17,7 @@ const SelectType = ({setOptionType}) => {
   }
 
   return (
-    <select className='btn_selectype' onChange={handleChange}>
+    <select className='btn_selectype' onChange={handleChange} value={optionType}>
       <option value="All">All pokemons</option>
       {
         listTypes?.map(type => (

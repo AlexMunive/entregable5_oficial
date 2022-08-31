@@ -11,35 +11,43 @@ const Pokedex = () => {
 
   const [pokemons, setPokemons] = useState()
   const [pokeSearch, setPokeSearch] = useState()
-  const [optionType, setOptionType] = useState()
+  const [optionType, setOptionType] = useState('All')
 
 
   useEffect(() => {
-    let URL
-    if (pokeSearch) {
-      let url = `https://pokeapi.co/api/v2/pokemon/${pokeSearch}`
+    if (optionType !=='All') {
+      //el usurio filtra por tipo
+      const URL = `https://pokeapi.co/api/v2/type/${optionType}/`
+      axios.get(URL)
+        .then(res => {
+          const arr = res.data.pokemon.map(e=>e.pokemon)
+          setPokemons({results: arr})
+        })
+        .catch(err => console.log(err))
+      }else if(pokeSearch){        
+      // logica cuando el usuario busca por el input
+        let url = `https://pokeapi.co/api/v2/pokemon/${pokeSearch}`
       const obj = {
-        results: [
-          {
-            url
-          }
-        ]
+        results: [{url}]
       }
       setPokemons(obj)
-
+      
     } else {
-      URL = 'https://pokeapi.co/api/v2/pokemon'
+      // el usuario quiere a todo los pokemones
+      const URL = 'https://pokeapi.co/api/v2/pokemon'
       axios.get(URL)
         .then(res => setPokemons(res.data))
         .catch(err => console.log(err))
     }
 
-  }, [pokeSearch])
+  }, [pokeSearch, optionType])
 
 
   const nameTrainer = useSelector(state => state.nameTrainer)
 
   // console.log(pokemons)
+
+  // console.log(optionType)
 
   return (
     <div className='pokedex'>
@@ -58,8 +66,8 @@ const Pokedex = () => {
           </strong> aqui podras encontrar tu pokemón favorito
         </p>
         <div className='search_selectype'>
-          <SearchInput setPokeSearch={setPokeSearch} />
-          <SelectType setOptionType={setOptionType} />
+          <SearchInput setPokeSearch={setPokeSearch} setOptionType={setOptionType} />
+          <SelectType setOptionType={setOptionType} optionType={optionType}/>
         </div>
         <div className='cards-container'>
           {
