@@ -1,6 +1,6 @@
 /*  sección SearchInput.jsx */
 
-.search_input{
+.search_input {
     font-size: 15px;
     border: 0;
     box-shadow: 10px;
@@ -16,7 +16,7 @@
     margin-left: 30px;
 }
 
-.btn_search{
+.btn_search {
     font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
     background-color: rgb(207, 15, 15);
@@ -27,12 +27,47 @@
     padding-bottom: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    cursor: pointer;
+    cursor: url(/src/img/dirección.png), auto;
     transition: transform 200ms ease;
 }
 
 .btn_search:hover {
     transform: scale(1.05);
     transition: transform 200ms ease;
+
+}
+
+/*  sección pokedex */
+
+.search_selectype {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/*  sección SearchInput.jsx */
+
+
+.btn_selectype {
+    text-transform: capitalize;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    border: 0;
+    box-shadow: 10px;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 10px 20px 0px rgba(218, 203, 203, 0.9);
+    width: 150px;
+    padding-left: 5px;
+    height: 37.5px;
+    margin-left: 10px;
+    transition: transform 200ms ease;
+    cursor: url(/src/img/dirección.png), auto;
+}
+
+.btn_selectype:hover {
+    transform: scale(1.03);
+    transition: transform 200ms ease;
+    cursor: url(/src/img/dirección.png), auto;
 
 }

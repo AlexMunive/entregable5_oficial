@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    cursor: url(img/pokebola.png), auto;
 
 }
 
@@ -59,7 +60,7 @@ body {
     padding-bottom: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    cursor: pointer;
+    cursor: url(/src/img/dirección.png), auto;
     transition: transform 200ms ease;
 }
 
@@ -237,8 +238,7 @@ body {
     overflow: hidden;
     background-color: white;
     box-shadow: 0 1px 7px #0003;
-    /* border: 7px solid #B1DBBC; */
-    cursor: pointer;
+    cursor: url(/src/img/dirección.png), auto;
     transition: transform 200ms ease;
     
 }
@@ -485,7 +485,6 @@ body {
 .card_h3 {
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
-
     text-align: center;
     display: flex;
     gap: 15px;

@@ -4,12 +4,15 @@ import PokemonCard from './Pokedex/PokemonCard'
 import pkedex_logo from '../img/pokedex_logo.png'
 import { useSelector } from 'react-redux'
 import SearchInput from './Pokedex/SearchInput'
+import SelectType from './Pokedex/SelectType'
 
 
 const Pokedex = () => {
 
   const [pokemons, setPokemons] = useState()
   const [pokeSearch, setPokeSearch] = useState()
+  const [optionType, setOptionType] = useState()
+
 
   useEffect(() => {
     let URL
@@ -54,7 +57,10 @@ const Pokedex = () => {
           <strong className='pokedex_strong'>Bienvenido {nameTrainer},
           </strong> aqui podras encontrar tu pokemón favorito
         </p>
-        <SearchInput setPokeSearch={setPokeSearch} />
+        <div className='search_selectype'>
+          <SearchInput setPokeSearch={setPokeSearch} />
+          <SelectType setOptionType={setOptionType} />
+        </div>
         <div className='cards-container'>
           {
             pokemons?.results.map(pokemon => (
