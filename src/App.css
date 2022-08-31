@@ -16,11 +16,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: rgb(241, 241, 241);
+    /* background-color: rgb(241, 241, 241); */
 }
 
 .home_h1 {
-    color: rgb(212, 14, 14);
+    /* color: rgb(212, 14, 14); */
     font-family: 'Times New Roman', Times, serif;
     font-size: 40px;
     margin-top: 20px;

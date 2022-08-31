@@ -44,6 +44,7 @@ const PokemonCard = ({url}) => {
               <StatPokemon 
                 key={stat.stat.url}
                 infoStat={stat}
+                color={pokemon?.types[0].type.name}
               />
             ))
           }

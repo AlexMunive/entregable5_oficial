@@ -93,9 +93,7 @@
     padding-left: 15px;
     padding-right: 15px;
     border: 0;
-    border-radius: 10%;
     transition: transform 200ms ease;
-    margin-right: 10px;
     margin-bottom: 20px;
 
 }
@@ -119,9 +117,7 @@
     padding-left: 15px;
     padding-right: 15px;
     border: 0;
-    border-radius: 10%;
     transition: transform 200ms ease;
-    margin-left: 10px;
     margin-bottom: 20px;
 
 }
@@ -144,6 +140,11 @@
     font-weight:bold;
     margin: 0;
     padding: 0;
-    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    height: 33px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    color: rgb(54, 54, 54);
    
 }

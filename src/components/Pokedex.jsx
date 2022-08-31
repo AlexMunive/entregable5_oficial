@@ -16,6 +16,7 @@ const Pokedex = () => {
   const [page, setPage] = useState(0)   // estado para la pagina
 
 
+
   useEffect(() => {
     if (optionType !== 'All') {
       //el usurio filtra por tipo
@@ -85,8 +86,8 @@ const Pokedex = () => {
           </strong> aqui podras encontrar tu pokemón favorito
         </p>
         <div className='search_selectype'>
-          <SearchInput setPokeSearch={setPokeSearch} setOptionType={setOptionType} />
-          <SelectType setOptionType={setOptionType} optionType={optionType} setPokeSearch={setPokeSearch} />
+          <SearchInput setPokeSearch={setPokeSearch} setOptionType={setOptionType} setPage={setPage}/>
+          <SelectType setOptionType={setOptionType} optionType={optionType} setPokeSearch={setPokeSearch} setPage={setPage}/>
         </div>
         <div className='cards-container'>
           {
@@ -109,7 +110,7 @@ const Pokedex = () => {
           }
         >
           Prev
-        </button>
+        </button>        
         <p className='footer-p'>
           {page + 1} of {maxPage}
         </p>
