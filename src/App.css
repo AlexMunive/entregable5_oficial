@@ -186,6 +186,7 @@ body {
     gap: 60px 20px;
     padding-bottom: 100px;
     max-width: 1300px;
+    padding-bottom: 50px;
   }
 .header_a {
     width: 100%;
@@ -344,6 +345,14 @@ body {
     border: 10px solid;
     border-color:rgb(138, 98, 38);
 }
+.border-psychic{
+    border: 10px solid;
+    border-color:rgb(224, 210, 127);
+}
+.border-flying{
+    border: 10px solid;
+    border-color:rgb(80, 87, 99);
+}
 
 
 /*  sección PokemonCard.jsx - background header */
@@ -410,6 +419,12 @@ body {
 .bg-ground{
     background: linear-gradient(179.75deg, #654008 -19.96%, #895C1A 43.67%, #D69638 138.4%);
 }
+.bg-psychic{
+    background: linear-gradient(179.75deg, #a77832 -19.96%, #c28c3c 43.67%, #fcb751 138.4%);
+}
+.bg-flying{
+    background: linear-gradient(179.75deg, #a78a81 -19.96%, #b89d75 43.67%, #85755d 138.4%);
+}
 
 
 /*  sección PokemonCard.jsx - colors letters */
@@ -461,6 +476,12 @@ body {
 }
 .ground{
     color: #654008;
+}
+.psychic{
+    color: #92692b;
+}
+.flying{
+    color: #706554;
 }
 
 

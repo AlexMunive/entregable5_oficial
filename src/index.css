@@ -78,3 +78,72 @@
     cursor: url(/src/img/dirección.png), auto;
 
 }
+
+/*  sección btn-footer  pokedex */
+
+.btn-footer-a{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: url(/src/img/dirección.png), auto;
+    text-align: center;
+    color: white;
+    background-color: rgba(221, 26, 26, 1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 0;
+    border-radius: 10%;
+    transition: transform 200ms ease;
+    margin-right: 10px;
+    margin-bottom: 20px;
+
+}
+
+.btn-footer-a:hover {
+    transform: scale(1.05);
+    transition: transform 200ms ease;
+    cursor: url(/src/img/dirección.png), auto;
+
+}
+
+.btn-footer-b{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: url(/src/img/dirección.png), auto;
+    text-align: center;
+    color: white;
+    background-color: rgba(221, 26, 26, 1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 0;
+    border-radius: 10%;
+    transition: transform 200ms ease;
+    margin-left: 10px;
+    margin-bottom: 20px;
+
+}
+
+.btn-footer-b:hover {
+    transform: scale(1.05);
+    transition: transform 200ms ease;
+    cursor: url(/src/img/dirección.png), auto;
+
+}
+
+.footer--footer{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight:bold;
+    margin: 0;
+    padding: 0;
+    border: 2px solid rgb(0, 0, 0);
+   
+}

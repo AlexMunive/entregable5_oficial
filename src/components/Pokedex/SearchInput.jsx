@@ -6,6 +6,7 @@ const SearchInput = ({setPokeSearch,setOptionType}) => {
         e.preventDefault()
         setPokeSearch(e.target.searchTex.value.trim().toLowerCase())
         setOptionType('All')
+        e.target.searchTex.value=""
     }
 
   return (
