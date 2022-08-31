@@ -6,7 +6,7 @@
     box-shadow: 10px;
     background-color: rgb(255, 255, 255);
     font-family: 'Times New Roman', Times, serif;
-    box-shadow: 5px 10px 20px 0px rgba(218, 203, 203, 0.9);
+    box-shadow: 5px 10px 20px 0px rgba(218, 203, 203, 0.3);
     outline: none;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -14,6 +14,13 @@
     padding-right: 15px;
     margin-bottom: 15px;
     margin-left: 30px;
+}
+
+.search_input:hover {
+    transform: scale(1.01);
+    transition: transform 200ms ease;
+    cursor: url(/src/img/dirección.png), auto;
+
 }
 
 .btn_search {
