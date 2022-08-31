@@ -10,7 +10,9 @@ import { lightTheme, darkTheme, GlobalStyles } from "./modo_dark/theme";
 const StyledApp = styled.div`
   color: ${(props) => props.theme.fontColor};
 `;
-
+const StyleB = styled.div`
+  color: ${(props) => props.theme.fontColorB};
+`;
 
 const Home = () => {
 
@@ -38,36 +40,38 @@ const Home = () => {
 
   return (
     <div className='home'>
+      <div className='switch_header'>
+      <label className="switch" >
+        <input type="checkbox" onClick={() => themeToggler()}/>
+        <span className="slider round">
+          <i className='bx bxs-sun' ></i>
+          <i className='bx bxs-moon'></i>
+        </span>        
+      </label>
+      </div>
+      
 
-<ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-      <GlobalStyles />
-      <StyledApp>
-        <h1>Hello World</h1>
-        <h1 className='home_h1'>¡Hola entrenador!</h1>
-        <button onClick={() => themeToggler()}>Change Theme</button>
-      </StyledApp>
-    </ThemeProvider>
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        <GlobalStyles />
+        <StyledApp>
+          <img className='img_home' src={pkedex_logo} alt="" />
+          <h1 className='home_h1'>¡Hola entrenador!</h1>
+        </StyledApp>
+        <StyleB>
+          <p className='home_p'>Para poder empezar, dame tu nombre</p>
+        </StyleB>
+        <form onSubmit={handleSubmit}>
+          <input className='home_input' id='name' type="text" placeholder='Tu nombre..' />
+          <button className='btn_home'>Comenzar</button>
+        </form>
+        <footer className='red-rectangle'>
+          <div className='black-rectangle'></div>
+          <div className='circle-ext'>
+            <div className="circle-int"></div>
+          </div>
+        </footer>
 
-
-
-
-
-
-
-
-      <img className='img_home' src={pkedex_logo} alt="" />
-      <h1 className='home_h1'>¡Hola entrenador!</h1>
-      <p className='home_p'>Para poder empezar, dame tu nombre</p>
-      <form onSubmit={handleSubmit}>
-        <input className='home_input' id='name' type="text" placeholder='Tu nombre..' />
-        <button className='btn_home'>Comenzar</button>
-      </form>
-      <footer className='red-rectangle'>
-        <div className='black-rectangle'></div>
-        <div className='circle-ext'>
-          <div className="circle-int"></div>
-        </div>
-      </footer>
+      </ThemeProvider>
     </div>
   )
 }
