@@ -3,10 +3,12 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import pkedex_logo from '../img/pokedex_logo.png'
 import pokebola_fondo from '../img/pokeball.png'
+import MovesPokemon from './Pokedex/MovesPokemon'
 
 const PokemonDetails = () => {
 
   const [pokeInfo, setPokeInfo] = useState()
+  const [itemMove, setItemMove] = useState(0) 
 
   const { name } = useParams()
 
@@ -22,7 +24,20 @@ const PokemonDetails = () => {
 
   }, [])
 
+  const maxMove = 20;
+  const totalItems = pokeInfo?.moves.length;
+  const maxMoveTotal = Math.ceil(totalItems / maxMove);
+
+  //creamos dos funciones para aumentar y disminuir las paginas, no los items
+  const onNext = () => {
+    setItemMove((itemMove + 1) % maxMoveTotal);
+  };
+  const onPrev = () => {
+    setItemMove((itemMove - 1) % maxMoveTotal);
+  };
+
   console.log(pokeInfo)
+
   return (
     <div className='pokemon_details'>
       <header className='red-rectangle-header'>
@@ -35,7 +50,7 @@ const PokemonDetails = () => {
       <article className={`article_card`} >
         <div className={`article_div bg-${pokeInfo?.types[0].type.name}`}>
           <img className='article_img' src={pokeInfo?.sprites.other["official-artwork"]["front_default"]} alt="" />
-          <div>
+          <div className='id_and_name'>
             <h1 className={`article_id ${pokeInfo?.types[0].type.name}`}>#{pokeInfo?.id}</h1>
             <h1 className={`article_name ${pokeInfo?.types[0].type.name}`}>{pokeInfo?.name}</h1>
           </div>
@@ -63,10 +78,97 @@ const PokemonDetails = () => {
             <h1 className='article_stats'>Stats</h1>
             <img className='pokebola_fondo' src={pokebola_fondo} alt="" />
             <div>
-
+              <div className='stat_1'>
+                <h1 className='stat_h1'>{`${pokeInfo?.stats[0].stat.name}`}</h1>
+                <h2 className='stat_h2'>{`${pokeInfo?.stats[0].base_stat}`}/150</h2>
+              </div>
+              <div>
+                <progress
+                  className={`progress ${pokeInfo?.types[0].type.name}`}
+                  min={0}
+                  max={150}
+                  value={`${pokeInfo?.stats[0].base_stat}`}>
+                </progress>
+              </div>
+            </div>
+            <div>
+              <div className='stat_1'>
+                <h1 className='stat_h1'>{`${pokeInfo?.stats[1].stat.name}`}</h1>
+                <h2 className='stat_h2'>{`${pokeInfo?.stats[1].base_stat}`}/150</h2>
+              </div>
+              <div>
+                <progress
+                  className={`progress ${pokeInfo?.types[0].type.name}`}
+                  min={0}
+                  max={150}
+                  value={`${pokeInfo?.stats[1].base_stat}`}>
+                </progress>
+              </div>
+            </div>
+            <div>
+              <div className='stat_1'>
+                <h1 className='stat_h1'>{`${pokeInfo?.stats[2].stat.name}`}</h1>
+                <h2 className='stat_h2'>{`${pokeInfo?.stats[2].base_stat}`}/150</h2>
+              </div>
+              <div>
+                <progress
+                  className={`progress ${pokeInfo?.types[0].type.name}`}
+                  min={0}
+                  max={150}
+                  value={`${pokeInfo?.stats[2].base_stat}`}>
+                </progress>
+              </div>
+            </div>
+            <div>
+              <div className='stat_1'>
+                <h1 className='stat_h1'>{`${pokeInfo?.stats[3].stat.name}`}</h1>
+                <h2 className='stat_h2'>{`${pokeInfo?.stats[3].base_stat}`}/150</h2>
+              </div>
+              <div>
+                <progress
+                  className={`progress ${pokeInfo?.types[0].type.name}`}
+                  min={0}
+                  max={150}
+                  value={`${pokeInfo?.stats[3].base_stat}`}>
+                </progress>
+              </div>
+            </div>
+            <div>
+              <div className='stat_1'>
+                <h1 className='stat_h1'>{`${pokeInfo?.stats[4].stat.name}`}</h1>
+                <h2 className='stat_h2'>{`${pokeInfo?.stats[4].base_stat}`}/150</h2>
+              </div>
+              <div>
+                <progress
+                  className={`progress ${pokeInfo?.types[0].type.name}`}
+                  min={0}
+                  max={150}
+                  value={`${pokeInfo?.stats[4].base_stat}`}>
+                </progress>
+              </div>
             </div>
           </div>
         </div>
+      </article>
+      <article className='article_card_footer'>
+        
+          <h1 className='movements'>Movements</h1>
+          <img className='pokebola_fondo_footer' src={pokebola_fondo} alt="" />
+        
+        <button className='btn-move-menor' onClick={onPrev} disabled={!itemMove}>&#60;</button>
+        <div className='move_total'>
+          {
+            pokeInfo?.moves.slice(itemMove * maxMove, maxMove * (itemMove + 1)).map((move)=>(
+              <MovesPokemon
+              key={move.move.url}
+              move={move}         
+              />
+
+            ))
+          }
+        </div>
+        <button className='btn-move-mayor' onClick={onNext}  disabled={ itemMove === Math.ceil(totalItems / maxMove) - 1}>&#62;</button>
+        <p className='move_p'>{itemMove + 1} of {maxMoveTotal}</p>
       </article>
     </div>
   )

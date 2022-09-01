@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 
 const StatPokemon = ({ infoStat, color }) => {
 
+  // console.log(infoStat)
+
    
 
   return (
