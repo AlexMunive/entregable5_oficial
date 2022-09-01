@@ -147,7 +147,7 @@ const PokemonDetails = () => {
               </div>
               <div>
                 <progress
-                  className={`progress ${pokeInfo?.types[0].type.name}`}
+                  className={`progress`}
                   min={0}
                   max={150}
                   value={`${pokeInfo?.stats[3].base_stat}`}>
