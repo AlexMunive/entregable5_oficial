@@ -55,13 +55,13 @@ const Home = () => {
         <GlobalStyles />
         <StyledApp>
           <img className='img_home' src={pkedex_logo} alt="" />
-          <h1 className='home_h1'>¡Hola entrenador!</h1>
+          <h1 className='home_h1'>Hi Trainer!</h1>
         </StyledApp>
         <StyleB>
-          <p className='home_p'>Para poder empezar, dame tu nombre</p>
+          <p className='home_p'>To Start give me your trainer name</p>
         </StyleB>
         <form onSubmit={handleSubmit}>
-          <input className='home_input' id='name' type="text" placeholder='Tu nombre..' />
+          <input className='home_input' id='name' type="text" placeholder='your name' />
           <button className='btn_home'>Comenzar</button>
         </form>
         <footer className='red-rectangle'>

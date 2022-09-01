@@ -69,7 +69,6 @@ const Pokedex = () => {
 
   return (
     <div className='pokedex'>
-
       <header className='red-rectangle-header'>
         <img className='header-img' src={pkedex_logo} alt="" />
         <div className='black-rectangle-header'></div>
@@ -77,13 +76,10 @@ const Pokedex = () => {
           <div className="circle-int-header"></div>
         </div>
       </header>
-
-
-
       <div className='pokedex_div'>
         <p className='pokedex_p'>
-          <strong className='pokedex_strong'>Bienvenido {nameTrainer},
-          </strong> aqui podras encontrar tu pokemón favorito
+          <strong className='pokedex_strong'>Welcome "{nameTrainer}" 
+          </strong>,  Catch them all.
         </p>
         <div className='search_selectype'>
           <SearchInput setPokeSearch={setPokeSearch} setOptionType={setOptionType} setPage={setPage}/>
