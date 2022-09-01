@@ -3,9 +3,8 @@ import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { setNameTrainer } from '../store/slices/nameTrainer.slice'
 import pkedex_logo from '../img/pokedex_logo.png'
-
 import styled, { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme, GlobalStyles } from "./modo_dark/theme";
+import { lightTheme, darkTheme, GlobalStyles } from "./modo_dark/Theme";
 
 const StyledApp = styled.div`
   color: ${(props) => props.theme.fontColor};
