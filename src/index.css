@@ -389,7 +389,8 @@ input:checked+.slider:before {
     padding-top: 5px;
     padding-bottom: 5px;
     color: rgb(48, 48, 48);
-    margin-right: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .abiliti_b {
@@ -428,7 +429,8 @@ input:checked+.slider:before {
 .type_a {
     font-size: 15px;
     text-transform: capitalize;
-    /* border: 1px solid rgb(143, 143, 143); */
+    margin-left: 10px;
+    margin-right: 10px;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
@@ -436,8 +438,7 @@ input:checked+.slider:before {
     color: rgb(255, 255, 255);
     width: 100px;
     text-align: center;
-    /* margin-right: 380px;
-    margin-left: 380px; */
+
 }
 
 .article_types_title {
@@ -622,7 +623,7 @@ input:checked+.slider:before {
 }
 
 .btn-move-menor{
-    font-size: 40px;
+    font-size: 50px;
     height: 60px;
     margin-top: 120px;
     background: none;
@@ -636,7 +637,7 @@ input:checked+.slider:before {
     transition: transform 200ms ease;
 }
 .btn-move-mayor{
-    font-size: 40px;
+    font-size: 50px;
     height: 60px;
     margin-top: 120px;
     background: none;
@@ -688,4 +689,9 @@ input:checked+.slider:before {
 .bx-left-arrow-circle:hover {
     transform: scale(1.05);
     transition: transform 200ms ease;
+}
+
+.type_total{
+    display: flex;
+    flex-direction: row;
 }

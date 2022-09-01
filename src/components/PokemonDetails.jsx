@@ -4,6 +4,8 @@ import { Link, useParams } from 'react-router-dom'
 import pkedex_logo from '../img/pokedex_logo.png'
 import pokebola_fondo from '../img/pokeball.png'
 import MovesPokemon from './Pokedex/MovesPokemon'
+import Types from './Pokedex/Types'
+import Skill from './Pokedex/Skill'
 
 const PokemonDetails = () => {
 
@@ -64,16 +66,32 @@ const PokemonDetails = () => {
           <div className='article_types_and_skill'>
             <div className='article_types_total'>
               <h1 className='article_types_title'>Type</h1>
-              <div>
-                <h2 className={`type_a bg-${pokeInfo?.types[0].type.name}`}>{pokeInfo?.types[0].type.name}</h2>
-                {/* <h2>{pokeInfo?.types[1].type.name}</h2> */}
+              <div className='type_total'>
+                {
+                   pokeInfo?.types.map((type)=>
+                   <Types
+                   key={type.type.url}
+                   type={type}
+                    />
+                   )
+
+                }
               </div>
             </div>
             <div className='article_abilities_total'>
               <h1 className='article_skill'>skill</h1>
               <div className='article_abilities'>
-                <h2 className='abiliti_a'>{pokeInfo?.abilities[0].ability.name}</h2>
-                <h2 className='abiliti_b'>{pokeInfo?.abilities[1].ability.name}</h2>
+              {
+                   pokeInfo?.abilities.map((ability)=>
+                   <Skill
+                   key={ability.ability.url}
+                   ability={ability}
+                    />
+                   )
+
+                }
+                {/* <h2 className='abiliti_a'>{pokeInfo?.abilities[0].ability.name}</h2>
+                <h2 className='abiliti_b'>{pokeInfo?.abilities[1].ability.name}</h2> */}
               </div>
             </div>
           </div>
