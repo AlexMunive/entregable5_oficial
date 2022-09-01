@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import pkedex_logo from '../img/pokedex_logo.png'
 import pokebola_fondo from '../img/pokeball.png'
 import MovesPokemon from './Pokedex/MovesPokemon'
@@ -47,6 +47,9 @@ const PokemonDetails = () => {
           <div className="circle-int-header"></div>
         </div>
       </header>
+      <button className='btn_back'> 
+      <Link to='/pokedex'><i className='bx bx-left-arrow-circle'></i></Link>
+      </button>
       <article className={`article_card`} >
         <div className={`article_div bg-${pokeInfo?.types[0].type.name}`}>
           <img className='article_img' src={pokeInfo?.sprites.other["official-artwork"]["front_default"]} alt="" />

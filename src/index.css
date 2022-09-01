@@ -628,6 +628,12 @@ input:checked+.slider:before {
     background: none;
     border: none;
     color: #E6901E;
+    cursor: url(img/pokebola.png), auto;
+    transition: transform 200ms ease;
+}
+.btn-move-menor:hover {
+    transform: scale(1.05);
+    transition: transform 200ms ease;
 }
 .btn-move-mayor{
     font-size: 40px;
@@ -637,7 +643,13 @@ input:checked+.slider:before {
     border: none;
     color: #E6901E;
     margin-right: 20px;
+    cursor: url(img/pokebola.png), auto;
+    transition: transform 200ms ease;
 
+}
+.btn-move-mayor:hover {
+    transform: scale(1.05);
+    transition: transform 200ms ease;
 }
 
 .move_p{
@@ -655,4 +667,25 @@ input:checked+.slider:before {
     padding-bottom: 3px;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.btn_back{
+    font-size: 60px;
+    background: none;
+    border: none;
+
+    transition: transform 200ms ease;
+}
+
+.bx-left-arrow-circle{
+    cursor: url(/src/img/dirección.png), auto;
+    transition: transform 200ms ease;
+    color: rgba(217, 63, 63, 1);
+    position: absolute;
+    top:100px;
+    left: 50px;
+}
+.bx-left-arrow-circle:hover {
+    transform: scale(1.05);
+    transition: transform 200ms ease;
 }
